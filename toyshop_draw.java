@@ -14,8 +14,16 @@ public class toyshop_draw {
 
     public static void changeToy(toy toyToChange, String newName, int newWeight){
         // изменяем имеющуюся игрушку (toy), 
-        // запрашиваем, что изменить (вес, название, кол-во НЕ ИД) 
-    
+        // запрашиваем (принимаем), что изменить (вес, название, кол-во, но НЕ ИД, они должны оставаться фиксированными) 
+        if (newName != null) {
+            toyToChange.setName(newName);
+        }
+        
+        if (newWeight > 0 && newWeight <=100) {
+            toyToChange.setWeight(newWeight);
+        } else {
+            System.out.println("Некорректное значение веса, должно быть от 0 до 100");
+        }
     }
 
     public static void addToyToQueue(Queue<singleToy> tmpQueue, toy tmpToy){
@@ -87,7 +95,7 @@ public class toyshop_draw {
         toy toy2 = new toy(2, "машинка", rnd.nextInt(10), rnd.nextInt(100));
         toy toy3 = new toy(3, "мишка", rnd.nextInt(10), rnd.nextInt(100));
 
-        //дляпромежуточной проверки
+        //для промежуточной проверки
         System.out.println("На складе:\n" + toy0.toString() + toy1.toString() + toy2.toString() + toy3.toString());
 
         // наполняем очередь случайными игрушками со склада
