@@ -28,8 +28,8 @@ public class singleToy {
         return "Toy{" + 
                 "ID=" + String.valueOf(toyID) + 
                 "; name=" + name + 
-                "weight=" + String.valueOf(drawWeight) + '\'' +
-                '}';
+                "; weight=" + String.valueOf(drawWeight) +
+                "} \n";
 
     }
 }

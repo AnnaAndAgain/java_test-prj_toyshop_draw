@@ -6,7 +6,8 @@ public class toy {
     private int qty;
     private int drawWeight;
 
-    public Toy(String name, int quantity, int weight){
+    public toy(int ID, String name, int quantity, int weight){
+        this.toyID = ID;
         this.name = name;
         this.qty = quantity;
         this.drawWeight = weight;
@@ -50,8 +51,8 @@ public class toy {
                 "ID=" + String.valueOf(toyID) + 
                 "; name=" + name + 
                 "; quantity=" + String.valueOf(qty) +
-                "weight=" + String.valueOf(drawWeight) + '\'' +
-                '}';
+                "; weight=" + String.valueOf(drawWeight) +
+                "} \n";
 
     }
 
